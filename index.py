@@ -9,14 +9,10 @@ Created on Dec 8, 2019
 Index docs into ES
 https://qbox.io/blog/building-an-elasticsearch-index-with-python
 '''
-
-ES_HOST = {"host" : "localhost", "port" : 9200}
-INDEX_NAME = 'artdatis'
-TYPE_NAME = 'recipes'
-
+from settings import *
 import glob
 
-txts_path = '../artdatis/tagging/OCRed/typed/'
+txts_path = '%s/artdatis/tagging/OCRed/typed/' % DATA_PATH
 text_corpus = []
 bulk_data = [] 
 # filter out and collect text files
