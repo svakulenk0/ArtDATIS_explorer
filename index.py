@@ -17,7 +17,7 @@ text_corpus = []
 bulk_data = [] 
 # filter out and collect text files
 for file_path in glob.glob(txts_path+'*_text.txt'):
-    with open(file_path) as file:
+    with open(file_path, encoding="utf-8") as file:
         text = file.read()
         # filter duplicates
         if text not in text_corpus:
