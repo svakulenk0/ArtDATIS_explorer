@@ -117,7 +117,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
             
-            <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Search through Glass Recipes</h1>
+            <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Glass recipes</h1>
 
                         <div class="ftco-search">
                             <div class="row">
@@ -151,7 +151,7 @@
                             </form>
                           </div>
 
-                          <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We have <span class="number" data-number="1500">0</span> recipes</p>
+                         <!--  <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We have <span class="number" data-number="1500">0</span> recipes</p> -->
 
 
                         </div>
@@ -175,7 +175,7 @@
                             <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
                                   <div class="mb-4 mb-md-0 mr-5">
                                     <div class="job-post-item-header d-flex align-items-center">
-                                      <h2 class="mr-3 text-black h3">{{ hit['_source']['_id'] }}</h2>
+                                      <h2 class="mr-3 text-black h3">{{ hit['_source']['start_text'] }}</h2>
                                        <!--  <div class="badge-wrap">
                                           {% for label in  hit['_source']['labels']  %}
                                             <span class="bg-secondary text-white badge py-2 px-3">{{label}}</span>

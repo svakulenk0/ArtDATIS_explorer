@@ -31,7 +31,7 @@ def index():
                     "query_string": {
                         "analyze_wildcard": True,
                         "query": str(search_term),
-                        "fields": ["doc.text"]
+                        "fields": ["text"]
                     }
                 },
                 "size": 50,

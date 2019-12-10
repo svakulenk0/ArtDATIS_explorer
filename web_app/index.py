@@ -11,6 +11,10 @@ https://qbox.io/blog/building-an-elasticsearch-index-with-python
 '''
 from settings import *
 import glob
+import re
+
+# n first characters for the doc preview
+LIMIT_START = 20
 
 txts_path = '%s/artdatis/tagging/OCRed/typed/' % DATA_PATH
 text_corpus = []
@@ -23,12 +27,14 @@ def corpus_iterator():
             # filter duplicates
             if text not in text_corpus:
                 text_corpus.append(text)
+                text = re.sub(' +', ' ', text)
+                start_text = text.lstrip()[:LIMIT_START]
                 with open(file_path.split('_text.txt')[0]+'_path.txt') as path_file:
                     path = path_file.read().strip()
                     yield {
                             "_index": INDEX_NAME,
                             "_type": TYPE_NAME,
-                            "doc": {"file_path": path, "text": text},
+                            "_source": {"file_path": path, "text": text, "start_text": start_text},
                         }
     print("Loaded %d documents"%len(text_corpus))
 
