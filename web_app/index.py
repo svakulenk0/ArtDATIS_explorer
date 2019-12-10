@@ -14,7 +14,7 @@ import glob
 import re
 
 # n first characters for the doc preview
-LIMIT_START = 20
+LIMIT_START = 100
 
 txts_path = '%s/artdatis/tagging/OCRed/typed/' % DATA_PATH
 text_corpus = []

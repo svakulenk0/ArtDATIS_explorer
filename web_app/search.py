@@ -35,9 +35,7 @@ def index():
                     }
                 },
                 "size": 50,
-                "sort": [
-
-                ]
+                "highlight": { "fields": { "text": {} } }
             }
             payload = json.dumps(payload)
             url = "http://localhost:9200/%s/%s/_search" % (INDEX_NAME, TYPE_NAME)
