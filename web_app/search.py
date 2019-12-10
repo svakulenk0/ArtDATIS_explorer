@@ -28,16 +28,15 @@ def index():
             print("Search Term:", search_term)
             payload = {
                 "query": {
-                    "query_string": {
-                        "analyze_wildcard": True,
-                        "query": str(search_term),
-                        "fields": ["text"]
-                    }
+                    "match": {
+                        "text": {
+                          "query": "term",
+                          "operator": 'and',
+                          "fuzziness": 'auto'
+                        } },
                 },
                 "size": 50,
-                "sort": [
-
-                ]
+                "highlight": { "fields": { "text": {} } }
             }
             payload = json.dumps(payload)
             url = "http://localhost:9200/%s/%s/_search" % (INDEX_NAME, TYPE_NAME)
