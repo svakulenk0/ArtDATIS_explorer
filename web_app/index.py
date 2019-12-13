@@ -30,7 +30,7 @@ def corpus_iterator():
                 text = re.sub(' +', ' ', text)
                 start_text = text.lstrip()[:LIMIT_START]
                 with open(file_path.split('_text.txt')[0]+'_path.txt') as path_file:
-                    path = path_file.read().strip()
+                    path = path_file.read().strip().replace(DATA_PATH, '/images')
                     yield {
                             "_index": INDEX_NAME,
                             "_type": TYPE_NAME,
