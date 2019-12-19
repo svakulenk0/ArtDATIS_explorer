@@ -41,5 +41,5 @@ def index():
             url = "http://localhost:9200/%s/%s/_search" % (INDEX_NAME, TYPE_NAME)
             response = requests.request("GET", url, data=payload, headers=headers)
             response_dict_data = json.loads(str(response.text))
-            print(response_dict_data)
+            # print(response_dict_data)
             return render_template('index.html', res=response_dict_data)
