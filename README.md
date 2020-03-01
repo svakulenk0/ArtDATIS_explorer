@@ -1,5 +1,6 @@
 # ArtDATIS
-mining the collection of glass production recipes https://artdatis.nl
+
+Mining the collection of Valkema's historical glass-making recipes https://artdatis.nl
 
 
 ## Requirements
