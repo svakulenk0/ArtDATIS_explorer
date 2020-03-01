@@ -18,5 +18,5 @@ Search engine:
 
 ## Run
 
-Reindex collection: python web_app/index.py
+Reindex collection: python web_app/index.py  
 Start the website with the interface to the search engine: python web_app/app.py
