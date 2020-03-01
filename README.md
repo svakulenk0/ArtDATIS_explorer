@@ -18,5 +18,12 @@ Search engine:
 
 ## Run
 
-Reindex collection: python web_app/index.py  
-Start the website with the interface to the search engine: python web_app/app.py
+1. Reindex the collection into Elastic Search:
+```
+python web_app/index.py
+```
+
+2. Start the website with the interface to the search engine:
+```
+python web_app/app.py
+```
